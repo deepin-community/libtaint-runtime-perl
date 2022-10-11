@@ -1,0 +1,27 @@
+Source: libtaint-runtime-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Joenio Costa <joenio@colivre.coop.br>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               perl-xs-dev,
+               perl:native
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtaint-runtime-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtaint-runtime-perl.git
+Homepage: https://metacpan.org/release/Taint-Runtime
+Rules-Requires-Root: no
+
+Package: libtaint-runtime-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Description: module to enable taint checking at runtime
+ Taint::Runtime module is intended to encourage the use of taint mode as
+ painless as possible. You should probably use the -T switch on the commandline
+ instead. There are a somewhat limited number of legitimate use cases where you
+ should use this module instead of the -T switch. Unless you have a specific and
+ good reason for not using the -T option, you should use the -T option. See
+ manpage for more details.
